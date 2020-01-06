@@ -4,11 +4,35 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="static/3rd/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="static/3rd/dataTables/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="static/css/index.css">
     <script src="static/3rd/jquery-3.4.1.min.js"></script>
     <script src="static/3rd/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="static/3rd/dataTables/jquery.dataTables.min.js"></script>
+    <script src="static/3rd/dataTables/dataTables.bootstrap4.min.js"></script>
+    <script src="static/js/index.js"></script>
 </head>
 <body>
-<h1>index</h1>
+<div class="container">
+    <div class="row">
+        <h1>学生列表</h1>
+    </div>
+    <div class="row">
+        <div class="col">
+            <table id="studentTable" class="table">
+                <thead>
+                    <tr>
+                        <td>学生ID</td>
+                        <td>学生姓名</td>
+                        <td>学生年龄</td>
+                        <td>操作</td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+</div>
+
 </body>
 </html>
