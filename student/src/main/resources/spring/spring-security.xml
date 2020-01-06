@@ -4,10 +4,25 @@
        xmlns:security="http://www.springframework.org/schema/security"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
 
-    <security:http>
-        <security:http-basic/>
+    <security:http pattern="/page/static/**" security="none"/>
+
+    <security:http auto-config="true">
+        <security:intercept-url pattern="/page/login.html" access="permitAll()"/>
+
+        <security:intercept-url pattern="/**" access="hasAnyRole('ROLE_USER')"/>
+        <security:form-login login-page="/page/login.html" default-target-url="/page/index.html"
+                             authentication-failure-url="/page/login.html"/>
+        <security:csrf disabled="true"/>
+        <security:remember-me token-validity-seconds="60"/>
     </security:http>
-    <security:authentication-manager/>
+
+    <security:authentication-manager>
+        <security:authentication-provider>
+            <security:user-service>
+                <security:user name="a" authorities="ROLE_USER" password="{noop}123"/>
+            </security:user-service>
+        </security:authentication-provider>
+    </security:authentication-manager>
 
     <bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
 </beans>
