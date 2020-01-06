@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.plf.student.mapper.StudentMapper">
+
+    <select id="selectStudent" resultType="com.plf.student.model.Student">
+        select studentId, studentName, studentAge
+        from t_student
+        limit #{start},#{size};
+    </select>
+</mapper>
