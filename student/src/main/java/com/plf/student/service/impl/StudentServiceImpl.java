@@ -22,4 +22,14 @@ public class StudentServiceImpl implements StudentService {
     public List<Student> selectStudent(Integer start, Integer size) {
         return studentMapper.selectStudent(start,size);
     }
+
+    @Override
+    public Integer addStudent(Student student) {
+        return studentMapper.addStudent(student);
+    }
+
+    @Override
+    public Integer selectCount() {
+        return studentMapper.selectCount();
+    }
 }

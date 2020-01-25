@@ -1,21 +1,22 @@
-.login_form {
-    margin: 165px 350px;
-    background: white;
-    padding: 15px 30px;
+.login {
+    background-color: white;
+    width: 360px;
+    height: 350px;
+    margin: 150px auto;
+    padding: 40px;
     border-radius: 15px;
-    height: 400px;
-}
-
-h1 {
-    margin: 25px;
-    text-align: center;
-}
-
-body {
-    background: linear-gradient(to right,#00BFFF,#FF00FF);
 }
 
 .sign {
-    display: block;
-    margin: 30px 65px;
+    position: relative;
+    right: -30px;
+    top: 20px;
+}
+
+body {
+    background: linear-gradient(to right,#00FFFF,#9932CC);
+}
+
+h1 {
+    text-align: center;
 }

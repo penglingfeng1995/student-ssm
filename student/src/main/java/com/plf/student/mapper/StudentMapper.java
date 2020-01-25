@@ -10,4 +10,8 @@ import java.util.List;
 public interface StudentMapper {
 
     List<Student> selectStudent(@Param("start") Integer start,@Param("size") Integer size);
+
+    Integer addStudent(@Param("student") Student student);
+
+    Integer selectCount();
 }

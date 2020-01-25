@@ -9,4 +9,13 @@
         from t_student
         limit #{start},#{size};
     </select>
+
+    <insert id="addStudent">
+        insert into t_student(studentName, studentAge)
+        values (#{student.studentName}, #{student.studentAge});
+    </insert>
+
+    <select id="selectCount" resultType="int">
+        select count(*) from t_student;
+    </select>
 </mapper>
