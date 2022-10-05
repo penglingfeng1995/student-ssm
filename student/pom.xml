@@ -26,7 +26,7 @@
         <servlet.api.version>4.0.1</servlet.api.version>
         <jsp.api.version>2.1</jsp.api.version>
         <lombok.version>1.18.10</lombok.version>
-        <jackson.version>2.10.1</jackson.version>
+        <jackson.version>2.12.6.1</jackson.version>
         <fastjson.version>1.2.62</fastjson.version>
     </properties>
 
